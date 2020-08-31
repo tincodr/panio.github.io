@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do Hyeon">
+    <link rel="stylesheet" href="/css/style.css">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+ </head>
+ <style>
+     body {
+         background: url('https://source.unsplash.com/1920x1080') no-repeat center center fixed;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         background-size: cover;
+         -o-background-size: cover;
+     }
+ </style>
+ <body style="font-family: Do Hyeon; text-align:center; background-color:#aaaaaa;">
+     <div class="container" style="max-width:960px;">
+         <nav class="navbar sticky-top justify-content-end nav-pills py-1">
+             <a class="navbar-brand" href="index.html" style="font-size:2.5em;font-weight:700">판이오.닷.넷</a>
+             <a class="nav-link active" href="#">팀 소개</a>
+             <a class="nav-link" href="portfolio.html">프로젝트</a>
+         </nav>
+    </div>
+    
+    <div class="masonry-wrapper">
+        <div class="masonry">
+           <div class="masonry-item">
+                <div class="masonry-content">
+                    <img src="https://picsum.photos/450/150" alt="2017 THE HISTORY, 위대한 유산 '판소리'">
+                    <h3 class="masonry-title">이선민 / 공연연출기획자 / DIRECTOR</h3>
+                    <p class="masonry-description">Eligendi similique excepturi cumque nemo modi voluptates mollitia atque doloribus, laborum magnam itaque a! Dignissimos expedita vel minus impedit laudantium.</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="masonry-content">
+                    <img src="https://picsum.photos/450/151" alt="이오쌀롱2020"/>
+                    <h3 class="masonry-title">이난영 / 극작가 / WRITER</h3>
+                    <p class="masonry-description">Eligendi similique excepturi cumque nemo modi voluptates mollitia atque doloribus, laborum magnam itaque a! Dignissimos expedita vel minus impedit laudantium.</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="masonry-content">
+                    <img src="https://picsum.photos/450/152" alt="2017 UNESCO 무형유산 정부간위원회 기념공연"/>
+                    <h3 class="masonry-title">이효영 / 제작감독 / PD</h3>
+                    <p class="masonry-description">Eligendi similique excepturi cumque nemo modi voluptates mollitia atque doloribus, laborum magnam itaque a! Dignissimos expedita vel minus impedit laudantium.</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="masonry-content">
+                    <img src="https://picsum.photos/450/155" alt="2017 대한민국 무형문화제대전 개막공연">
+                    <h3 class="masonry-title">양호진 / 청년기획가 / JR. PRODUCER</h3>
+                    <p class="masonry-description">Eligendi similique excepturi cumque nemo modi voluptates mollitia atque doloribus, laborum magnam itaque a! Dignissimos expedita vel minus impedit laudantium.</p>
+                </div>
+            </div>
+            
+            <div class="masonry-item">
+                <div class="masonry-content">
+                    <img src="https://picsum.photos/450/153" alt="2017 THE HISTORY, 위대한 유산 '판소리'">
+                    <h3 class="masonry-title">오예승 / 작곡가 / COMPOSER</h3>
+                    <p class="masonry-description">Eligendi similique excepturi cumque nemo modi voluptates mollitia atque doloribus, laborum magnam itaque a! Dignissimos expedita vel minus impedit laudantium.</p>
+                </div>
+            </div>
+        </div>
+        <div class="masonry-footer">
+            
+        </div>
+    </div>
+    <script src="//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script>
+        /**
+         * Set appropriate spanning to any masonry item
+         *
+         * Get different properties we already set for the masonry, calculate 
+         * height or spanning for any cell of the masonry grid based on its 
+         * content-wrapper's height, the (row) gap of the grid, and the size 
+         * of the implicit row tracks.
+         *
+         * @param item Object A brick/tile/cell inside the masonry
+         * @link https://w3bits.com/css-grid-masonry/
+         */
+        function resizeMasonryItem(item) {
+            /* Get the grid object, its row-gap, and the size of its implicit rows */
+            var grid = document.getElementsByClassName('masonry')[0];
+            if (grid) {
+                var rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap')),
+                    rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows')),
+                    gridImagesAsContent = item.querySelector('img.masonry-content');
+
+                /*
+                 * Spanning for any brick = S
+                 * Grid's row-gap = G
+                 * Size of grid's implicitly create row-track = R
+                 * Height of item content = H
+                 * Net height of the item = H1 = H + G
+                 * Net height of the implicit row-track = T = G + R
+                 * S = H1 / T
+                 */
+                var rowSpan = Math.ceil((item.querySelector('.masonry-content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+
+                /* Set the spanning as calculated above (S) */
+                item.style.gridRowEnd = 'span ' + rowSpan;
+                if (gridImagesAsContent) {
+                    item.querySelector('img.masonry-content').style.height = item.getBoundingClientRect().height + "px";
+                }
+            }
+        }
+
+        /**
+         * Apply spanning to all the masonry items
+         *
+         * Loop through all the items and apply the spanning to them using 
+         * `resizeMasonryItem()` function.
+         *
+         * @uses resizeMasonryItem
+         * @link https://w3bits.com/css-grid-masonry/
+         */
+        function resizeAllMasonryItems() {
+            // Get all item class objects in one list
+            var allItems = document.querySelectorAll('.masonry-item');
+
+            /*
+             * Loop through the above list and execute the spanning function to
+             * each list-item (i.e. each masonry item)
+             */
+            if (allItems) {
+                for (var i = 0; i > allItems.length; i++) {
+                    resizeMasonryItem(allItems[i]);
+                }
+            }
+        }
+
+        /**
+         * Resize the items when all the images inside the masonry grid 
+         * finish loading. This will ensure that all the content inside our
+         * masonry items is visible.
+         *
+         * @uses ImagesLoaded
+         * @uses resizeMasonryItem
+         * @link https://w3bits.com/css-grid-masonry/
+         */
+        function waitForImages() {
+            //var grid = document.getElementById("masonry");
+            var allItems = document.querySelectorAll('.masonry-item');
+            if (allItems) {
+                for (var i = 0; i < allItems.length; i++) {
+                    imagesLoaded(allItems[i], function(instance) {
+                        var item = instance.elements[0];
+                        resizeMasonryItem(item);
+                        console.log("Waiting for Images");
+                    });
+                }
+            }
+        }
+
+        /* Resize all the grid items on the load and resize events */
+        var masonryEvents = ['load', 'resize'];
+        masonryEvents.forEach(function(event) {
+            window.addEventListener(event, resizeAllMasonryItems);
+        });
+
+        /* Do a resize once more when all the images finish loading */
+        waitForImages();
+    </script>
+</body>
+
+</html>
