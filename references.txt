@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/2777479/display-random-image-when-page-loads-without-utilizing-onload-in-the-body-tag
