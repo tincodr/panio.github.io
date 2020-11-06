@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do Hyeon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 </head>
 <style>
     body {
@@ -35,7 +36,7 @@
         display: -webkit-flex;
         display: flex;
         background-color: black;
-        opacity: 0.4;
+        opacity: 0.7;
         align-items: center;
         justify-content: center;
         -webkit-align-items: center;
@@ -48,9 +49,22 @@
         -ms-box-pack: center;
         -ms-box-align: center;
     }
+    
+    #videobcg { 
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        min-width: 100%;
+        min-height: 100%;
+        height: auto;
+        
+        z-index: -1000;
+    }
+
 </style>
 
-<body style="font-family: Do Hyeon; text-align:center; background-color:#aaaaaa;">
+<body style="font-family: Do Hyeon; text-align:center; background-color:#aaaaaa;">   
+    <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0"><source src="./vid/background_bw.mp4" type="video/mp4">Sorry, your browser does not support HTML5 video.</video>
     <div class="container" style="max-width:960px;">
         <nav class="navbar sticky-top justify-content-end nav-pills py-1">
             <a class="navbar-brand" href="index.html" style="font-size:2.5em;font-weight:700"><img src="./img/logo_white.jpeg" width=40 height=40 class="d-inline-block align-middle" />&nbsp;판이오.닷.넷</a>
@@ -58,7 +72,6 @@
                 <a class="nav-link" href="team.html">팀 소개</a>
                 <a class="nav-link" href="portfolio.html">프로젝트</a>
             </nav>
-
         </nav>
     </div>
     <div class="layer">
