@@ -4,9 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Do Hyeon"></link>
-    <link rel="stylesheet" href="./css/style.css"></link>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"></link>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Do Hyeon">
+    </link>
+    <link rel="stylesheet" href="./css/style.css">
+    </link>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </link>
 
 </head>
 <style>
@@ -26,6 +29,7 @@
             column-count: 2;
         }
     }
+
     @media (min-width: 960px) {
         .card-columns {
             -webkit-column-count: 3;
@@ -33,6 +37,7 @@
             column-count: 3;
         }
     }
+
     @media (min-width: 1280px) {
         .card-columns {
             -webkit-column-count: 4;
@@ -40,6 +45,7 @@
             column-count: 4;
         }
     }
+
     @media (min-width: 1680px) {
         .card-columns {
             -webkit-column-count: 5;
@@ -47,7 +53,8 @@
             column-count: 5;
         }
     }
-/*
+
+    /*
     @media (min-width: 62em) {
         .card-columns {
             -webkit-column-count: 4;
@@ -67,32 +74,34 @@
     .card-title {
         font-weight: 700;
         font-size: 1.2em;
-        text-align:left;
+        text-align: left;
     }
 
     .card-text {
         font-size: 0.9em;
-        text-align:left;
+        text-align: left;
     }
 
     .card {
-        border-color:black;
-        border-width:2px;
+        border-color: black;
+        border-width: 2px;
     }
-    #videobcg { 
+
+    #videobcg {
         position: fixed;
         top: 0px;
         left: 0px;
         min-width: 100%;
         min-height: 100%;
         height: auto;
-        
+
         z-index: -1000;
     }
 </style>
 
 <body style="font-family: Do Hyeon; text-align:center; background-color:#aaaaaa;">
-    <video autoplay loop muted playsinline id="videobcg" preload="auto"><source src="./vid/octagon.mp4" type="video/mp4">Sorry, your browser does not support HTML5 video.</video>
+    <video autoplay loop muted playsinline id="videobcg" preload="auto">
+        <source src="./vid/octagon.mp4" type="video/mp4">Sorry, your browser does not support HTML5 video.</video>
     <div class="container" style="max-width:960px;">
         <nav class="navbar sticky-top justify-content-end nav-pills py-1">
             <a class="navbar-brand" href="index.html" style="font-size:2.5em;font-weight:700"><img src="./img/logo_white.jpeg" width=40 height=40 class="d-inline-block align-middle" />&nbsp;판이오</a>
@@ -104,13 +113,41 @@
     </div>
     <div class="container" style="max-width:1680px;">
         <div class="card-columns">
+           <div class="card">
+                <img class="card-img-top" src="./img/projects/2019_jugum.jpg" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">영화 복원 변사극 "주검의 상자"<br>2019</h5>
+                    <p class="card-text">2019.10.27 경남도립미술관 야외마당 / 음원소실 영화 대사 복원 및 낭독 공연 / 경남도립미술관 주최 / 상남영화제작소 제작</p>
+                    <p class="card-text"><a href="https://www.hankyung.com/politics/article/201910236052Y" target="_blank">https://www.hankyung.com/politics/article/201910236052Y</a></p>
+                    <p class="card-text">#연출 #구성 #조연출</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="./img/projects/2019_soundofseocho.jpg" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">사운드 오브 서초<br>2019</h5>
+                    <p class="card-text">2019.09.28 예술의 전당 앞 특설무대 / 1천명 청소년 뮤직페스티벌 / 서초구 주최 / 서초문화재단 주관</p>
+                    <p class="card-text"><a href="http://seoripul.org/kor/gallery/gallery02.jsp?pagenumber=2&sn=&st=&sn02=&st02=2019&sc=&sdate=&edate=&orderby=&sort=&status=&at=view&idx=3341&category=
+" target="_blank">http://seoripul.org/kor/gallery/gallery02.jsp?pagenumber=2&sn=&st=&sn02=&st02=2019&sc=&sdate=&edate=&orderby=&sort=&status=&at=view&idx=3341&category=</a></p>
+                    <p class="card-text">#연출 #구성 #조연출</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="./img/projects/2019_seoripul.png" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">서리풀 페스티벌<br>2019</h5>
+                    <p class="card-text">2019.09.27 심산아트센터 / 서초구 주최 / 서초문화재단 주관</p>
+                    <p class="card-text"><a href="http://seoripul.org/kor/gallery/gallery02.jsp?pagenumber=2&sn=&st=&sn02=&st02=2019&sc=&sdate=&edate=&orderby=&sort=&status=&at=view&idx=3332&category=
+" target="_blank">http://seoripul.org/kor/gallery/gallery02.jsp?pagenumber=2&sn=&st=&sn02=&st02=2019&sc=&sdate=&edate=&orderby=&sort=&status=&at=view&idx=3332&category=</a></p>
+                    <p class="card-text">#운영</p>
+                </div>
+            </div>
             <div class="card">
                 <img class="card-img-top" src="./img/projects/2019_seoulmaeul.jpg" alt="">
                 <div class="card-body">
                     <h5 class="card-title">서울마을주간 개막식<br>2019</h5>
                     <p class="card-text">2019.09.26 어린이대공원 열린 무대 / 서울시 주최 / 서울마을 공동체종합지원센터 주관</p>
-                    <p class="card-text"><a href="https://maeulweek.org/2019-서울마을주간/
-                        " target="_blank">https://maeulweek.org/2019-서울마을주간/</a></p>
+                    <p class="card-text"><a href="https://maeulweek.org/2019-서울마을주간/" target="_blank">https://maeulweek.org/2019-서울마을주간/</a></p>
                     <p class="card-text">#기획 #연출 #무대 #제작</p>
                 </div>
             </div>
@@ -156,7 +193,7 @@
                     <p class="card-text">#구성</p>
                 </div>
             </div>
-            
+
             <div class="card">
                 <img class="card-img-top" src="./img/projects/2016_gudgaja.jpg" alt="">
                 <div class="card-body">
@@ -293,7 +330,7 @@
                 <div class="card-body">
                     <h5 class="card-title">비목나라 춘천호국문화제<br>2014</h5>
                     <p class="card-text">2014.06.06 KT&G 상상마당 춘천야외특설무대 <b>/</b> 비목나라위국애민단, ROTC중앙회, 춘천시문화재단, 춘천시무용협회 주관 <b>/</b> (사)이미시문화서원 주관</p>
-                    
+
                     <p class="card-text">#연출 #운영</p>
                 </div>
             </div>
