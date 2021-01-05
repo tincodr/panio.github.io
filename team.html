@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Do Hyeon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
 </head>
 <style>
     body {
@@ -21,17 +20,21 @@
 
     @media (min-width: 580px) {
         .card-columns {
-            -webkit-column-count: 2;
-            -moz-column-count: 2;
+
             column-count: 2;
         }
     }
 
-    @media (min-width: 960px) {
+    @media (min-width: 1024px) {
         .card-columns {
-            -webkit-column-count: 3;
-            -moz-column-count: 3;
+
             column-count: 3;
+        }
+    }
+    @media (min-width: 1366px) {
+        .card-columns {
+
+            column-count: 6;
         }
     }
 /*
@@ -58,8 +61,13 @@
     }
 
     .card-text {
-        font-size: 0.8em;
+        font-size: 0.9em;
         text-align: left;
+    }
+
+    .card {
+        border-color: black;
+        border-width: 2px;
     }
 
     #videobcg { 
@@ -106,7 +114,7 @@
             <div class="card text-left">
                 <img class="card-img-top" src="./img/profile_director.jpg" alt="    ">
                 <div class="card-body">
-                    <h5 class="card-title">이선민 / 공연연출기획자<br>DIRECTOR</h5>
+                    <h5 class="card-title">이선민 / 공연연출기획<br>DIRECTOR</h5>
                     <p class="card-text">공연과 축제, 국제행사에서 전천후로 활약하며 전통예술에서 해법을 제시하고 사람에게서 길을 찾아가는
                         공연연출기획자 이선민입니다</p>
                 </div>
@@ -134,13 +142,20 @@
                     <p class="card-text">예술을 통해 사람들을 행복하게 하고, 문화를 통해 사람들이 감동할 수 있게 하는 연출 겸 배우 강우혁 입니다.</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">프로젝트 관련 문의</h5>
-                    <p class="card-text"><a href="mailto:paniostage@gmail.com" target="_blank">paniostage@gmail.com</a></p>
-                </div>
-            </div>
+            
         </div>
+    </div>
+    <div class="footer">
+        <a href="https://www.facebook.com/panio.kr/" target="_blank"><img src="img/facebook_grey.png" width=25 height=25/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://instagram.com/pan25.project?igshid=18bp92rzbpcxa" target="_blank"><img src="img/instagram_grey.png" width=25 height=25/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.youtube.com/channel/UC92pB5xG2-SMe_TWk80CzuQ" target="_blank"><img src="img/youtube_grey.png" width=25 height=25/></a><br><br>
+        <img src="img/logo_grey.png" width=40 height=40/><br><br>
+        <p style="font-family:Gulim;font-size:0.7em;color:white">
+        (주)판이오 문의/연락처: paniostage@gmail.com  대표: 이선민<br>
+        사업자등록번호: 597-81-01569  여성기업 제0111-2019-08576호<br>
+        주소: 서울특별시 동작구 노량진로 140, 메가스터디타워 2층<br>
+        COPYRIGHT ⒸPANIO Co.,LTD. ALL RIGHTS RESERVED.
+        </p>
     </div>
 </body>
 
