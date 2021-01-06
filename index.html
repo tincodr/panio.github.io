@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Do Hyeon"></link>
-    <link rel="stylesheet" href="./css/style.css"></link>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"></link>
-
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Do Hyeon" />
+    <link rel="stylesheet" href="./css/style.css" .>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    
 </head>
 <style>
     body {
@@ -40,49 +40,98 @@
         align-items: center;
         justify-content: center;
     }
-    
-    #videobcg { 
+
+    #videobcg {
         position: fixed;
         top: 0px;
         left: 0px;
         min-width: 100%;
         min-height: 100%;
         height: auto;
-        
+
         z-index: -1000;
     }
 
-</style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
 
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: white;
+        margin: 15% auto;
+        padding: 10px;
+        min-width: 400px;
+        width: 30%;
+    }
+</style>
 <body style="font-family: Do Hyeon; text-align:center; background-color:#aaaaaa;">   
     <video autoplay loop muted playsinline id="videobcg" preload="auto"><source src="./vid/octagon.mp4" type="video/mp4">Sorry, your browser does not support HTML5 video.</video>
     <div class="container" style="max-width:100%;">
         <nav class="navbar sticky-top justify-content-end nav-pills py-1">
             <a class="navbar-brand" href="index.html" style="font-size:2.5em;font-weight:700"><img src="./img/logo_white.jpeg" width=40 height=40 class="d-inline-block align-middle" />&nbsp;판이오</a>
             <nav class="nav justify-content-center">
-                <a class="nav-link" href="team.html">팀 소개</a>
-                <a class="nav-link" href="portfolio.html">프로젝트</a>
+                <a class="nav-link" href="team.html">CREATORS</a>
+                <a class="nav-link" href="portfolio.html">PROJECTS</a>
             </nav>
         </nav>
     </div>
+    
     <div class="layer">
-        <p style="font-family:Do Hyeon;font-size:1.4em;color:white">"판이오"는 전통과 현대를 잇는<br> 다양한 문화 예술 컨텐츠를 통해<br>소통하고 참여하는 예술을 지향합니다.</p>
+        <p style="font-family:Do Hyeon;font-size:30px;font-size:3vw;color:white">"판이오"는 전통과 현대를 잇는<br> 다양한 문화 예술 컨텐츠를 통해<br>소통하고 참여하는 예술을 지향합니다.</p>
+        
     </div>
     <div class="fixed-bottom">
         <a href="https://www.facebook.com/panio.kr/" target="_blank"><img src="img/facebook_grey.png" width=25 height=25/></a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://instagram.com/pan25.project?igshid=18bp92rzbpcxa" target="_blank"><img src="img/instagram_grey.png" width=25 height=25/></a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://www.youtube.com/channel/UC92pB5xG2-SMe_TWk80CzuQ" target="_blank"><img src="img/youtube_grey.png" width=25 height=25/></a><br><br>
+        <a href="https://www.youtube.com/channel/UC92pB5xG2-SMe_TWk80CzuQ" target="_blank"><img src="img/youtube_grey.png" width=25 height=25/></a><br><br><br><br>
         <img src="img/logo_grey.png" width=40 height=40/><br><br>
-        <p style="font-family:Gulim;font-size:0.7em;color:white">
-        (주)판이오 문의/연락처: paniostage@gmail.com  대표: 이선민<br>
+        <p style="font-family:Gulim;font-size:0.7em;color:grey">
+        (주)판이오 문의/연락처: <a href="mailto:paniostage@gmail.com">paniostage@gmail.com</a>  대표: 이선민<br>
         사업자등록번호: 597-81-01569  여성기업 제0111-2019-08576호<br>
         주소: 서울특별시 동작구 노량진로 140, 메가스터디타워 2층<br>
         COPYRIGHT ⒸPANIO Co.,LTD. ALL RIGHTS RESERVED.
         </p>
+        <!-- Trigger the modal with a button -->
+
+
+    </div>
+    <div id="myModal" class="modal">
+ 
+      <!-- Modal content -->
+      <div class="modal-content">
+            <a href="https://youtu.be/Aw6EF5Jy-JY" target="_blank"><img src="img/projects/2021_youngam_popup.png" width="100%"/></a>
+            <a href="img/projects/2021_youngam_program.pdf" target="_blank">e프로그램북 다운로드</a>
+            <div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 10px;padding-top: 10px;" onClick="close_pop();">
+                <span class="pop_bt" style="font-size: 13pt;" >
+                     닫기
+                </span>
+            </div>
+      </div>
+ 
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script> 
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            $('#myModal').show();
+        });
+        //팝업 Close 기능
+        function close_pop(flag) {
+            $('#myModal').hide();
+        };
+    </script>
 </body>
 
 </html>
