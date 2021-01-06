@@ -72,8 +72,8 @@
         background-color: white;
         margin: 2% auto;
         padding: 10px;
-        min-width: 400px;
-        width: 30%;
+        min-width: 420px;
+        width: 420px;
     }
 </style>
 <body style="font-family: Do Hyeon; text-align:center; background-color:#aaaaaa;">   
@@ -107,17 +107,22 @@
 
 
     </div>
+    
     <div id="myModal" class="modal">
- 
-      <!-- Modal content -->
-      <div class="modal-content">
-            <a href="https://youtu.be/Aw6EF5Jy-JY" target="_blank"><img src="img/projects/2021_youngam_popup.jpg" width="100%"/></a>
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <img src="img/projects/2021_youngam_popup.jpg" usemap="#popup_map" width="400px">
+            <map name="popup_map" id="popup_map">
+                <area href="./img/projects/2021_youngam_program.pdf" target="_blank" coords="36,414,191,465"  shape="rect">
+                <area href="https://youtu.be/Aw6EF5Jy-JY" target="_blank" coords="215,414,369,466" shape="rect">
+            </map>
             <div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 10px;padding-top: 10px;" onClick="close_pop();">
-                <span class="pop_bt" style="font-size: 13pt;" >
-                     닫기
+                <span class="pop_bt" style="font-size: 13pt;">
+                    닫기
                 </span>
             </div>
-      </div>
+        </div>
  
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
